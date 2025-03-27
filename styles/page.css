@@ -1,0 +1,11 @@
+.movie-card-hover:hover {
+    background: #1e424e;
+  }
+  
+  .movie-card-hover:hover .movie-card-icon {
+    opacity: 1;
+  }
+  
+  .movie-poster-group:hover .movie-poster {
+    opacity: 1;
+  }

@@ -26,7 +26,7 @@ const MovieCard: React.FC<movieResponseProps> = ({
 
   return (
     <div
-      className="bg-[#092C39] hover:bg-[#1E424E] transition-all duration-500 cursor-pointer md:p-[8px] rounded-[12px] overflow-hidden flex flex-col md:gap-4 relative group"
+      className="bg-[#092C39] movie-card-hover transition-all duration-500 cursor-pointer md:p-[8px] rounded-[12px] overflow-hidden flex flex-col md:gap-4 relative group"
       key={_id}
     >
       <div className="relative w-full md:aspect-[1/1.505] aspect-[1/1.37]  h-full">
@@ -44,7 +44,7 @@ const MovieCard: React.FC<movieResponseProps> = ({
             e.stopPropagation();
             router.push(`/edit-movie/${_id}`);
           }}
-          className="absolute top-2 right-2 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 p-2 rounded-full max-md:[&_svg]:w-[20px] max-md:[&_svg]:h-[20px]"
+          className="absolute top-2 movie-card-icon right-2 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 p-2 rounded-full max-md:[&_svg]:w-[20px] max-md:[&_svg]:h-[20px]"
         >
           <EditIcon />
         </span>
@@ -55,10 +55,7 @@ const MovieCard: React.FC<movieResponseProps> = ({
         <div className="flex flex-col md:gap-2 gap-4 max-w-full">
           {/* Movie title */}
           <div className="relative group">
-            <div
-              className="max-w-full"
-              title={title}
-            >
+            <div className="max-w-full" title={title}>
               <h4 className="font-bold max-md:font-bold truncate md:leading-[32px]">
                 {title}
               </h4>
