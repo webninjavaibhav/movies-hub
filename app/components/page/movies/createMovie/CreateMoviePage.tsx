@@ -87,7 +87,7 @@ export default function CreateMoviePage({ movieId }: CreateMoviePageProps) {
               />
             </div>
           ) : existingPoster ? (
-            <div className='relative w-full h-full rounded-[10px] overflow-hidden object-cover group'>
+            <div className='relative w-full h-full rounded-[10px] overflow-hidden object-cover movie-poster-group'>
               <Image
                 src={existingPoster}
                 alt='Current poster'
@@ -95,7 +95,7 @@ export default function CreateMoviePage({ movieId }: CreateMoviePageProps) {
                 className='object-cover rounded-md'
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               />
-              <div className='absolute inset-0 bg-black/50 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+              <div className='absolute movie-poster inset-0 bg-black/50 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
                 <EditIcon />
                 <Typography
                   variant='h4'
